@@ -9,164 +9,179 @@
 
     body {
       margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      background: #070707;
-      color: #f7f2e8;
+      background: #050505;
+      color: #f6f1e8;
+      font-family: Inter, Helvetica, Arial, sans-serif;
     }
 
-    .page {
-      max-width: 1180px;
+    main {
+      width: min(1180px, calc(100% - 48px));
       margin: 0 auto;
-      padding: 28px 24px 80px;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 70px;
-    }
-
-    .logo {
-      font-size: 28px;
+      padding: 34px 0 120px;
+      font-size: 15px;
       font-weight: 800;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.03em;
     }
 
     .hero {
-      min-height: 72vh;
-      display: grid;
-      align-items: center;
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 90px;
+      border-bottom: 1px solid rgba(255,255,255,.14);
     }
 
     .eyebrow {
-      color: #d69b43;
+      color: #d79a32;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(56px, 9vw, 112px);
-      line-height: 0.92;
-      letter-spacing: -0.08em;
-      margin: 0 0 26px;
-      max-width: 980px;
+      font-size: clamp(72px, 12vw, 154px);
+      line-height: .82;
+      letter-spacing: -.085em;
+      margin: 0;
+      max-width: 1080px;
     }
 
-    .subhead {
-      font-size: clamp(20px, 2vw, 28px);
-      color: #d8d0c2;
-      max-width: 720px;
-      line-height: 1.35;
-      margin-bottom: 34px;
+    .hero p {
+      margin: 28px 0 0;
+      max-width: 620px;
+      font-size: clamp(20px, 2.2vw, 30px);
+      line-height: 1.25;
+      color: #d6cec0;
     }
 
     .buttons {
       display: flex;
       gap: 14px;
-      flex-wrap: wrap;
+      margin-top: 34px;
     }
 
-    button, .btn {
-      border: 1px solid #d69b43;
-      background: #d69b43;
-      color: #070707;
-      padding: 14px 22px;
+    .btn {
+      padding: 13px 22px;
       border-radius: 999px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 900;
       text-decoration: none;
-      cursor: pointer;
+      border: 1px solid #d79a32;
+      color: #050505;
+      background: #d79a32;
     }
 
     .btn.secondary {
       background: transparent;
-      color: #f7f2e8;
+      color: #f6f1e8;
     }
 
     section {
-      padding: 82px 0;
-      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 88px 0;
+      border-bottom: 1px solid rgba(255,255,255,.14);
     }
 
     h2 {
-      font-size: clamp(36px, 5vw, 64px);
-      line-height: 1;
-      letter-spacing: -0.06em;
-      margin: 0 0 34px;
+      font-size: clamp(44px, 6vw, 82px);
+      line-height: .9;
+      letter-spacing: -.07em;
+      margin: 0 0 36px;
+    }
+
+    .subline {
+      font-size: 24px;
+      color: #d6cec0;
+      margin: -20px 0 42px;
+      max-width: 680px;
+      line-height: 1.3;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 14px;
     }
 
     .card {
-      background: #111;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 28px;
-      padding: 28px;
-      min-height: 190px;
+      border-top: 1px solid rgba(255,255,255,.28);
+      padding: 24px 0 10px;
+      min-height: 145px;
     }
 
     .card h3 {
       margin: 0 0 12px;
-      font-size: 26px;
-      letter-spacing: -0.04em;
+      font-size: 25px;
+      line-height: 1;
+      letter-spacing: -.045em;
     }
 
     .card p {
-      color: #cfc6b8;
-      line-height: 1.5;
       margin: 0;
-      font-size: 17px;
+      color: #c9c0b2;
+      font-size: 16px;
+      line-height: 1.45;
+      max-width: 280px;
     }
 
     .story {
-      max-width: 760px;
+      max-width: 850px;
     }
 
     .story p {
-      font-size: 22px;
-      line-height: 1.45;
-      color: #d8d0c2;
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1.16;
+      letter-spacing: -.04em;
+      color: #e6ded1;
+      margin: 0;
     }
 
     .ask {
-      background: linear-gradient(135deg, #151515, #0b0b0b);
-      border: 1px solid rgba(214,155,67,0.45);
-      border-radius: 36px;
-      padding: 42px;
+      padding: 64px;
+      border: 1px solid rgba(215,154,50,.65);
+      border-radius: 28px;
+      background: linear-gradient(135deg, #111, #070707);
+    }
+
+    .ask h2 {
+      margin-bottom: 20px;
+    }
+
+    .ask p {
+      font-size: 25px;
+      color: #d6cec0;
+      max-width: 660px;
+      line-height: 1.3;
+      margin: 0 0 28px;
     }
 
     @media (max-width: 800px) {
-      header { padding-bottom: 48px; }
+      main { width: min(100% - 28px, 1180px); }
+      header { padding-bottom: 70px; }
+      .hero { min-height: 70vh; }
       .grid { grid-template-columns: 1fr; }
-      section { padding: 58px 0; }
+      section { padding: 64px 0; }
+      .ask { padding: 34px; }
     }
   </style>
 </head>
 
 <body>
-  <main class="page">
-    <header>
-      <div class="logo">Dr. Norm’s</div>
-    </header>
+  <main>
+    <header>Dr. Norm’s</header>
 
     <section class="hero">
-      <div>
-        <div class="eyebrow">Artisan Edibles · Targeted Wellness · Max™</div>
-        <h1>Delicious. Effective. Precisely dosed.</h1>
-        <p class="subhead">
-          A trusted cannabis brand built on real recipes, precise dosing, and science-backed wellness.
-        </p>
-        <div class="buttons">
-          <a class="btn" href="#products">Explore</a>
-          <a class="btn secondary" href="#ask">Ask Dr. Norm</a>
-        </div>
+      <div class="eyebrow">Artisan Edibles · Targeted Wellness · Max™</div>
+      <h1>Delicious. Effective. Precisely dosed.</h1>
+      <p>A trusted cannabis brand built on real recipes, precise dosing, and science-backed wellness.</p>
+      <div class="buttons">
+        <a class="btn" href="#products">Explore</a>
+        <a class="btn secondary" href="#ask">Ask Dr. Norm</a>
       </div>
     </section>
 
@@ -196,44 +211,29 @@
         <div class="card"><h3>Gummies</h3><p>High dose, solventless and distillate options.</p></div>
         <div class="card"><h3>MAX Tabs</h3><p>High dose. Precise. Discreet.</p></div>
         <div class="card"><h3>SleepWell</h3><p>Fall asleep faster. Stay asleep longer.</p></div>
-        <div class="card"><h3>FeelWell</h3><p>Relief without the heavy high.</p></div>
+        <div class="card"><h3>FeelWell</h3><p>Relief without the heavy high.<br>Pain relief. Stress relief. Built for real life.</p></div>
       </div>
     </section>
 
     <section>
       <h2>Why Dr. Norm’s</h2>
+      <p class="subline">We have standards.</p>
       <div class="grid">
-        <div class="card">
-          <h3>Delicious First</h3>
-          <p>Real ingredients. Real recipes. No weedy taste.</p>
-        </div>
-        <div class="card">
-          <h3>Precise Dosing</h3>
-          <p>Safe, consistent, and reliable.</p>
-        </div>
-        <div class="card">
-          <h3>Built to Perform</h3>
-          <p>Proven science. Proven results.</p>
-        </div>
+        <div class="card"><h3>Delicious First</h3><p>Real ingredients. Real recipes. No weedy taste.</p></div>
+        <div class="card"><h3>Precise Dosing</h3><p>Safe, consistent, and reliable.</p></div>
+        <div class="card"><h3>Built to Perform</h3><p>Proven science. Proven results.</p></div>
       </div>
     </section>
 
-    <section>
-      <div class="story">
-        <h2>Our Story</h2>
-        <p>
-          A family brand inspired by our dad, the real Dr. Norm, and our pharmacist mom Audrey —
-          whose legendary cookies started it all.
-        </p>
-      </div>
+    <section class="story">
+      <h2>Our Story</h2>
+      <p>A family brand you can trust — inspired by our dad, the real Dr. Norm, and our pharmacist mom Audrey, whose legendary cookies started it all.</p>
     </section>
 
     <section id="ask">
       <div class="ask">
         <h2>Ask Dr. Norm</h2>
-        <p class="subhead">
-          Have a question? Get guidance, recommendations, and straight answers about cannabis.
-        </p>
+        <p>Have a question? Ask Dr. Norm. Guidance, recommendations, and straight answers about cannabis.</p>
         <a class="btn" href="#">Ask Dr. Norm</a>
       </div>
     </section>
