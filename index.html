@@ -1,154 +1,242 @@
-<!-- VERSION: approved-homepage-2026-04-23 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Norm’s</title>
-
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #000;
-      color: #fff;
-      line-height: 1.5;
+      font-family: Inter, Arial, sans-serif;
+      background: #070707;
+      color: #f7f2e8;
     }
 
-    .container {
-      max-width: 1100px;
+    .page {
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 80px 20px;
+      padding: 28px 24px 80px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 70px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .hero {
+      min-height: 72vh;
+      display: grid;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #d69b43;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
     }
 
     h1 {
-      font-size: 48px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-top: 70px;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #ccc;
-      font-size: 18px;
-      margin: 0;
+      font-size: clamp(56px, 9vw, 112px);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+      margin: 0 0 26px;
+      max-width: 980px;
     }
 
     .subhead {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 60px;
-      color: #aaa;
-      font-size: 20px;
+      font-size: clamp(20px, 2vw, 28px);
+      color: #d8d0c2;
+      max-width: 720px;
+      line-height: 1.35;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    button, .btn {
+      border: 1px solid #d69b43;
+      background: #d69b43;
+      color: #070707;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #f7f2e8;
+    }
+
+    section {
+      padding: 82px 0;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    h2 {
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin: 0 0 34px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
     .card {
       background: #111;
-      padding: 25px;
-      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 28px;
+      min-height: 190px;
     }
 
-    .cta-wrap {
-      text-align: center;
-      margin-top: 20px;
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      letter-spacing: -0.04em;
     }
 
-    .cta {
-      display: inline-block;
-      padding: 12px 26px;
-      background: #fff;
-      color: #000;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      margin-top: 10px;
+    .card p {
+      color: #cfc6b8;
+      line-height: 1.5;
+      margin: 0;
+      font-size: 17px;
     }
 
-    .footer {
-      text-align: center;
-      font-size: 14px;
-      color: #777;
-      padding: 60px 20px;
+    .story {
+      max-width: 760px;
+    }
+
+    .story p {
+      font-size: 22px;
+      line-height: 1.45;
+      color: #d8d0c2;
+    }
+
+    .ask {
+      background: linear-gradient(135deg, #151515, #0b0b0b);
+      border: 1px solid rgba(214,155,67,0.45);
+      border-radius: 36px;
+      padding: 42px;
+    }
+
+    @media (max-width: 800px) {
+      header { padding-bottom: 48px; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
     }
   </style>
 </head>
 
 <body>
+  <main class="page">
+    <header>
+      <div class="logo">Dr. Norm’s</div>
+    </header>
 
-  <div class="container">
-
-    <h1>Artisan Edibles. Targeted Wellness. Max™</h1>
-
-    <p class="subhead">
-      A trusted cannabis brand built on taste, science, and real results.
-    </p>
-
-    <h2>Our Product Lines</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Edibles</h3>
-        <p>Bakery-quality cookies, brownies, crispy rice bars, and gummies.</p>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Artisan Edibles · Targeted Wellness · Max™</div>
+        <h1>Delicious. Effective. Precisely dosed.</h1>
+        <p class="subhead">
+          A trusted cannabis brand built on real recipes, precise dosing, and science-backed wellness.
+        </p>
+        <div class="buttons">
+          <a class="btn" href="#products">Explore</a>
+          <a class="btn secondary" href="#ask">Ask Dr. Norm</a>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Wellness</h3>
-        <p>Science-backed formulations for sleep, relief, and balance.</p>
+    <section>
+      <div class="grid">
+        <div class="card">
+          <h3>Shop Edibles</h3>
+          <p>Delectable cookies, brownies, crispy rice bars, gummies & more.</p>
+        </div>
+        <div class="card">
+          <h3>Shop Wellness</h3>
+          <p>Science-backed formulations for sleep, relief, and everyday life.</p>
+        </div>
+        <div class="card">
+          <h3>Shop MAX</h3>
+          <p>High dose products for experienced users — tablets, gummies, and cookies.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>MAX™</h3>
-        <p>High-dose products for experienced consumers.</p>
+    <section id="products">
+      <h2>Our Product Lines</h2>
+      <div class="grid">
+        <div class="card"><h3>Cookies</h3><p>Classic, low-dose or MAX.</p></div>
+        <div class="card"><h3>Brownies</h3><p>Rich, indulgent, long-lasting.</p></div>
+        <div class="card"><h3>Crispy Rice Bars</h3><p>Delicious. Nostalgic. Potent.</p></div>
+        <div class="card"><h3>Gummies</h3><p>High dose, solventless and distillate options.</p></div>
+        <div class="card"><h3>MAX Tabs</h3><p>High dose. Precise. Discreet.</p></div>
+        <div class="card"><h3>SleepWell</h3><p>Fall asleep faster. Stay asleep longer.</p></div>
+        <div class="card"><h3>FeelWell</h3><p>Relief without the heavy high.</p></div>
       </div>
-    </div>
+    </section>
 
-    <h2>Why Dr. Norm’s</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Amazing Taste</h3>
-        <p>Real recipes. No shortcuts.</p>
+    <section>
+      <h2>Why Dr. Norm’s</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Delicious First</h3>
+          <p>Real ingredients. Real recipes. No weedy taste.</p>
+        </div>
+        <div class="card">
+          <h3>Precise Dosing</h3>
+          <p>Safe, consistent, and reliable.</p>
+        </div>
+        <div class="card">
+          <h3>Built to Perform</h3>
+          <p>Proven science. Proven results.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Precise Dosing</h3>
-        <p>Consistent and lab-tested.</p>
+    <section>
+      <div class="story">
+        <h2>Our Story</h2>
+        <p>
+          A family brand inspired by our dad, the real Dr. Norm, and our pharmacist mom Audrey —
+          whose legendary cookies started it all.
+        </p>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Built on Science</h3>
-        <p>Formulations designed for real results.</p>
+    <section id="ask">
+      <div class="ask">
+        <h2>Ask Dr. Norm</h2>
+        <p class="subhead">
+          Have a question? Get guidance, recommendations, and straight answers about cannabis.
+        </p>
+        <a class="btn" href="#">Ask Dr. Norm</a>
       </div>
-    </div>
-
-    <h2>Ask Dr. Norm</h2>
-
-    <div class="cta-wrap">
-      <p>Get recommendations and guidance instantly.</p>
-      <a href="#" class="cta">Get a Recommendation</a>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    © Dr. Norm’s
-  </div>
-
+    </section>
+  </main>
 </body>
 </html>
